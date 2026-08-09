@@ -1,0 +1,656 @@
+.dashboard-container {
+    min-height: 100vh;
+    display: flex;
+    background: #f8fafc;
+}
+
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    padding: 16px 20px;
+}
+
+/* Header Styles */
+.analytics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.analytics-header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.analytics-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.analytics-title svg {
+    font-size: 40px;
+    color: #5b21b6;
+}
+
+.analytics-title h1 {
+    font-size: 39px;
+    font-weight: 700;
+    color: #18233b;
+    margin: 0;
+}
+
+.analytics-header-left p {
+    font-size: 15px;
+    color: #3d4754;
+    margin: 2px 0 0 0; 
+}
+
+/* Export Button */
+.export-btn {
+    padding: 10px 18px;
+    border: 1px solid #5b4fcf;
+    background: #ffffff;
+    color: #5b4fcf;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.export-btn:hover {
+    background: #5b4fcf;
+    color: #ffffff;
+}
+
+/* Filters Card Section */
+.analytics-filters {
+    display: flex;
+    align-items: flex-end;
+    gap: 22px;
+    background: #ffffff;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 20px;
+}
+
+.filter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.filter-box label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #455060;
+}
+
+/* Filter Dropdown Buttons */
+.filter-btn {
+    min-width: 150px;
+    height: 38px;
+    padding: 0 10px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #28323f;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn span {
+    flex: 1;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.filter-btn:hover {
+    border-color: #5b4fcf;
+    color: #5b4fcf;
+}
+
+.filter-btn svg {
+    font-size: 16px;
+}
+
+/* Clear Filters Button */
+.clear-filters-btn {
+    height: 44px;
+    padding: 0 14px;
+    background: #f1f0fe;
+    color: #5b4fcf;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.clear-filters-btn:hover {
+    background: #e4e1fe;
+}
+
+.clear-filters-btn svg {
+    font-size: 16px;
+}
+
+/* ANALYTICS CARDS */
+.analytics-summary{
+    display:flex;
+    gap:20px;
+    margin-top:28px;
+}
+.summary-card{
+    flex:1;
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 2px 8px rgba(15,23,42,.05);
+}
+
+.summary-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.summary-title{
+    font-size:14px;
+    font-weight:600;
+    color:#64748b;
+}
+
+.summary-card h2{
+    font-size:32px;
+    font-weight:700;
+    color:#18233b;
+    margin:0 0 10px;
+}
+
+.summary-change{
+    font-size:14px;
+    font-weight:600;
+    color:#16a34a;
+}
+.summary-icon{
+    width:42px;
+    height:42px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+}
+
+.summary-icon svg{
+    font-size:22px;
+}
+
+/* Purple */
+.summary-icon.purple{
+    background:#f3e8ff;
+}
+.summary-icon.purple svg{
+    color:#7c3aed;
+}
+
+/* Green */
+.summary-icon.green{
+    background:#dcfce7;
+}
+.summary-icon.green svg{
+    color:#16a34a;
+}
+
+/* Red */
+.summary-icon.red{
+    background:#fee2e2;
+}
+.summary-icon.red svg{
+    color:#dc2626;
+}
+
+/* Blue */
+.summary-icon.blue{
+    background:#dbeafe;
+}
+.summary-icon.blue svg{
+    color:#2563eb;
+}
+
+/* CHART_P&L */
+.analytics-row{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:16px;
+    margin-top:24px;
+}
+.monthly-card{
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:18px 18px 12px;
+    box-shadow:0 2px 8px rgba(15,23,42,.05);
+}
+.distribution-card{
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:16px;
+    box-shadow:0 2px 8px rgba(15,23,42,0.05)
+}
+.monthly-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+}
+.monthly-header h3{
+    font-size:20px;
+    font-weight:700;
+    color:#18233b;
+    margin:0;
+}
+.small-filter-btn{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:8px 14px;
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:600;
+    color:#475569;
+    cursor:pointer;
+}
+.small-filter-btn:hover{
+    border-color:#5b21b6;
+}
+.monthly-chart{
+    width:100%;
+    height:290px;
+    padding-top:10px;
+}
+
+/* Win/loss distri chart */
+.distribution-header{
+    margin-bottom:12px;
+}
+.distribution-header h3{
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    color:#18233b;
+}
+.distribution-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
+.distribution-chart{
+    width:170px;
+    height:170px;
+    flex-shrink:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.distribution-legend{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:12px;
+}
+.legend-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+    font-weight:500;
+    color:#475569;
+}
+
+.legend-item strong{
+    margin-left:auto;
+    font-size:15px;
+    font-weight:700;
+    color:#18233b;
+}
+.legend-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+}
+.legend-dot.win{
+    background:#16a34a;
+}
+.legend-dot.loss{
+    background:#dc2626;
+}
+.legend-dot.breakeven{
+    background:#f59e0b;
+}
+.pie-center-value{
+    font-size:21px;
+    font-weight:600;
+    fill:#18233b;
+}
+.pie-center-label{
+    font-size:14px;
+    font-weight:500;
+    fill:#64748b;
+}
+.performance-banner{
+    margin-top:12px;
+    width:100%;
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:12px 14px;
+    background:#f5f1ff;
+    border-radius:12px;
+}
+.performance-banner-icon{
+    width:48px;
+    height:48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+}
+.performance-banner-content h4{
+    flex:1;
+    text-align:left;
+    margin:0 0 4px;
+    font-size:16px;
+    color:#5b21b6;
+    font-weight:700;
+}
+.performance-banner-content p{
+    margin:0;
+    color:#475569;
+    line-height:1.45;
+    font-size:13px;
+}
+.pie-right-side{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* Strategy Performance */
+.analytics-row-two{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    margin-top:24px;
+}
+.strategy-card,.days-card{
+    margin-top:24px;
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 2px 8px rgba(15,23,42,.05);
+}
+
+.strategy-header,.days-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.strategy-header h3,.days-header h3{
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    color:#18233b;
+}
+
+.strategy-chart,.days-chart{
+    width:100%;
+    height:300px;
+}
+.day-row{
+    margin-bottom:22px;
+}
+.day-info{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.day-info span{
+    font-size:14px;
+    font-weight:400;
+    color:#475569;
+}
+.day-info strong{
+    font-size:14px;
+    font-weight:700;
+    color:#18233b;
+}
+.day-progress{
+    width:100%;
+    height:10px;
+    background:#eef2f7;
+    border-radius:999px;
+    overflow:hidden;
+}
+.day-progress-fill{
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #8b5cf6,
+        #7c3aed
+    );
+    border-radius:999px;
+    transition:width 4s ease;
+}
+.analytics-row-three{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:24px;
+}
+.holding-card,.risk-card{
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 2px 8px rgba(15,23,42,.05);
+}
+.holding-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+.holding-header h3{
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+    color:#18233b;
+}
+.holding-chart{
+    width:100%;
+    height:280px;
+}
+
+/* ================= ROW 4 ================= */
+
+.analytics-row-four {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+  align-items: start;
+  width: 100%;
+}
+
+.table-card {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  min-width: 0;
+}
+
+/* ---------- Header ---------- */
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.table-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.small-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fdfdfd;
+  border: 1px solid #eff1f3;
+  border-radius: 11px;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0c1017;
+  cursor: pointer;
+}
+
+/* ---------- Table Layout & Columns ---------- */
+
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.stock-table thead {
+  background: #fafafa;
+}
+
+/* Column Width Percentages */
+.col-rank   { width: 8%;  padding-left: 16px; }
+.col-symbol { width: 38%; }
+.col-pnl    { width: 24%; }
+.col-trades { width: 14%; }
+.col-rate   { width: 16%; padding-right: 16px; }
+
+.stock-table th {
+  padding: 8px 6px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #13161a;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
+}
+
+.stock-table td {
+  padding: 8px 6px;
+  font-size: 13px;
+  color: #0f172a;
+  border-bottom: 1px solid #eceff3; /* Darker border line */
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.stock-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rank-cell {
+  color: #64748b;
+  padding-left: 16px !important;
+}
+
+.trades-cell {
+  color: #334155;
+}
+
+/* ---------- Inline Symbol Styling ---------- */
+
+.symbol-cell-td {
+  padding: 6px !important;
+}
+
+.symbol-wrapper {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* Purple circle avatar matching your request */
+.stock-logo-purple {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #4f46e5; /* Distinct dark purple / indigo */
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.stock-symbol {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e293b;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+/* ---------- P&L Colors ---------- */
+
+.stock-table td.profit {
+  color: #16a34a !important;
+  font-weight: 600;
+}
+
+.stock-table td.loss {
+  color: #dc2626 !important;
+  font-weight: 600;
+}
